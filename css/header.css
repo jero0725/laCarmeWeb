@@ -1,0 +1,66 @@
+.site-header {
+  background: var(--primary);
+  color: var(--accent);
+  height: var(--header-height);
+  line-height: var(--header-height);
+  padding: 0 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  height: 100%;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+.logo {
+  width: 175px;
+  max-height: 45px;
+  margin-right: 0.75rem;
+  fill: var(--secondary);
+}
+
+.main-nav {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 5%;
+}
+
+.nav-link:hover {
+  color: var(--primary);
+  background-color: var(--accent);
+}
+
+.menu-toggle {
+  display: none;
+  border: 0;
+  background: transparent;
+  color: var(--accent);
+  font-size: 1.5rem;
+  cursor: pointer;
+}

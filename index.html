@@ -5,108 +5,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>La Carme Pastelería</title>
   <link rel="icon" href="Recursos/Vectores/faviconNegro.svg" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="css/main.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand">
-        <img src="Recursos/Vectores/logoCompleto.svg" alt="La Carme logo" class="logo" />
-        <span>La Carme</span>
-      </a>
-      <nav class="main-nav" aria-label="Menú principal">
-        <a href="#" class="nav-link">Inicio</a>
-        <a href="#productos" class="nav-link">Productos</a>
-        <a href="#nosotros" class="nav-link">Nosotros</a>
-        <a href="#contacto" class="nav-link">Contacto</a>
-      </nav>
-      <button class="menu-toggle" aria-label="Abrir menú">☰</button>
-    </div>
-  </header>
-
+  <site-hero></site-hero>
+  <site-header></site-header>
   <main>
-    <section class="hero">
-      <div class="container hero-content">
-        <div class="hero-left">
-          <h1>Pasteles artesanales que enamoran</h1>
-          <p>Sabores tradicionales, ingredientes frescos y el toque dulce de la familia carme.</p>
-          <a href="#productos" class="btn-primary">Ver nuestro catálogo</a>
-        </div>
-        <div class="hero-right">
-          <img src="Recursos/Vectores/logoCompleto.svg" alt="La Carme logo" class="logo-hero" />
-        </div>
-      </div>
-    </section>
-
-    <section id="productos" class="card-grid">
-      <div class="container">
-        <h2>Nuestros Creaciones</h2>
-        <div class="cards">
-          <article class="card">
-            <h3>Torta de Chocolate</h3>
-            <p>Chocolate oscuro, ganache suave y decoraciones con frutos rojos.</p>
-          </article>
-          <article class="card">
-            <h3>Red Velvet</h3>
-            <p>Clásica con crema de queso y un toque de avellana.</p>
-          </article>
-          <article class="card">
-            <h3>Cheesecake Caramelizado</h3>
-            <p>Textura cremosa con salsa de caramelo salado.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="callouts">
-      <div class="container">
-        <h2>Ventajas de La Carme</h2>
-        <div class="callout-items">
-          <article class="callout">
-            <h3>Ingredientes naturales</h3>
-            <p>Solo usamos productos frescos y sin conservantes.</p>
-          </article>
-          <article class="callout">
-            <h3>Pedidos personalizados</h3>
-            <p>Diseños únicos para cada ocasión y presupuesto.</p>
-          </article>
-          <article class="callout">
-            <h3>Entrega puntual</h3>
-            <p>Compromiso con la puntualidad en cada entrega.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="nosotros" class="about">
-      <div class="container">
-        <h2>Quiénes somos</h2>
-        <p>En La Carme transformamos recetas heredadas en dulces momentos. Desde 2024 elaboramos postres con amor para familias y empresas.</p>
-      </div>
-    </section>
-
-    <section id="contacto" class="contact">
-      <div class="container">
-        <h2>Contacto</h2>
-        <p>Escríbenos y armamos tu pedido especial.</p>
-        <p><strong>Correo:</strong> hola@lacarme.com</p>
-        <p><strong>Teléfono:</strong> +54 9 11 1234-5678</p>
-      </div>
-    </section>
+    <site-products></site-products>
+    <site-about></site-about>
+    <site-contact></site-contact>
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 La Carme Pastelería. Todos los derechos reservados.</p>
-    </div>
-  </footer>
+  <site-footer></site-footer>
 
-  <script>
-    const menuToggle = document.querySelector('.menu-toggle');
-    const nav = document.querySelector('.main-nav');
-    menuToggle.addEventListener('click', () => {
-      nav.classList.toggle('open');
-    });
-  </script>
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
