@@ -27,6 +27,7 @@
   flex-direction: column;
   justify-content: center;
   max-width: 55ch;
+  opacity: 0;
 }
 
 .hero-right {
@@ -35,6 +36,8 @@
   align-items: stretch;
   justify-content: center;
   height: 100%;
+  padding: 5%;
+  opacity: 0;
 }
 
 .hero h1 {
@@ -45,14 +48,59 @@
 
 .logo-hero {
   height: auto;
-  max-height: 600px;
+  max-height: 500px;
   width: auto;
   display: block;
-  filter: sepia(100%) hue-rotate(22deg) saturate(350%) brightness(30%);
 }
 
 .hero p {
   font-size: 1.2rem;
   color: #fdf5f2;
   margin-bottom: 1.5rem;
+}
+
+@keyframes heroReveal {
+  from {
+    opacity: 0;
+    background-position: center 58%;
+  }
+
+  to {
+    opacity: 1;
+    background-position: center;
+  }
+}
+
+@keyframes heroSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroSlideIn {
+  from {
+    opacity: 0;
+    transform: translateX(28px) scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero,
+  .hero-left,
+  .hero-right {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
 }

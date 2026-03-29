@@ -3,7 +3,7 @@ const heroContent = {
   description: "Sabores tradicionales, ingredientes frescos y el toque dulce de la familia carme.",
   ctaLabel: "Ver nuestro catálogo",
   ctaHref: "#productos",
-  logoSrc: "Recursos/Vectores/logoCompleto.svg",
+  logoSrc: "Recursos/logoCompletoBordo.png",
   logoAlt: "La Carme logo"
 };
 

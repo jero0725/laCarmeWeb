@@ -31,7 +31,7 @@
 }
 
 .logo {
-  width: 175px;
+  width: auto;
   max-height: 45px;
   margin-right: 0.75rem;
   fill: var(--secondary);
@@ -63,4 +63,11 @@
   color: var(--accent);
   font-size: 1.5rem;
   cursor: pointer;
+  transition: transform 220ms ease, opacity 220ms ease;
+  transform-origin: center;
+}
+
+.menu-toggle.is-open {
+  transform: rotate(90deg) scale(1.08);
+  opacity: 0.9;
 }

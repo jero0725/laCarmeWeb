@@ -19,16 +19,16 @@ const productsContent = {
 class SiteProducts extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
-      <section id="productos" class="card-grid">
+      <section id="productos" class="products-section">
         <div class="container">
           <h2>${productsContent.title}</h2>
-          <div class="cards">
+          <div class="products-grid">
             ${productsContent.items
               .map(
                 (item) => `
-                  <article class="card">
-                    <div class="card-image" aria-hidden="true"></div>
-                    <h3>${item.title}</h3>
+                  <article class="product-card">
+                    <div class="product-card__image" aria-hidden="true"></div>
+                    <h3 class="product-card__title">${item.title}</h3>
                     <p>${item.description}</p>
                   </article>
                 `

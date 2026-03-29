@@ -1,6 +1,6 @@
 const headerContent = {
   brandName: "La Carme",
-  brandLogo: "Recursos/Vectores/logoCompleto.svg",
+  brandLogo: "Recursos/logoSimpleDorado.png",
   navLinks: [
     { href: "#", label: "Inicio" },
     { href: "#productos", label: "Productos" },
@@ -67,21 +67,26 @@ class SiteHeader extends HTMLElement {
       return;
     }
 
+    const setMenuState = (isOpen) => {
+      nav.classList.toggle("open", isOpen);
+      menuToggle.classList.toggle("is-open", isOpen);
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
+    };
+
     this._handleMenuClick = () => {
-      nav.classList.toggle("open");
-      const expanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", String(!expanded));
+      setMenuState(!nav.classList.contains("open"));
     };
 
     this._handleResize = () => {
-      if (window.innerWidth >= 680 && nav.classList.contains("open")) {
-        nav.classList.remove("open");
-        menuToggle.setAttribute("aria-expanded", "false");
+      if (window.innerWidth >= 680) {
+        setMenuState(false);
       }
     };
 
     menuToggle.addEventListener("click", this._handleMenuClick);
     window.addEventListener("resize", this._handleResize);
+    setMenuState(false);
   }
 }
 
