@@ -27,7 +27,6 @@
   flex-direction: column;
   justify-content: center;
   max-width: 55ch;
-  opacity: 0;
 }
 
 .hero-right {
@@ -37,8 +36,6 @@
   justify-content: center;
   height: 100%;
   padding: 5%;
-  opacity: 0;
-  animation: heroSlideUp 0.8s ease-out 0.2s forwards;
 }
 
 .hero h1 {
@@ -58,18 +55,6 @@
   font-size: 1.2rem;
   color: #fdf5f2;
   margin-bottom: 1.5rem;
-}
-
-@keyframes heroSlideUp {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {
