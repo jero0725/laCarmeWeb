@@ -19,6 +19,7 @@
   gap: 2rem;
   max-width: 1100px;
   min-height: 200px;
+  animation: heroSlideUp 1s ease-out forwards;
 }
 
 .hero-left {
@@ -59,18 +60,6 @@
   margin-bottom: 1.5rem;
 }
 
-@keyframes heroReveal {
-  from {
-    opacity: 0;
-    background-position: center 58%;
-  }
-
-  to {
-    opacity: 1;
-    background-position: center;
-  }
-}
-
 @keyframes heroSlideUp {
   from {
     opacity: 0;
@@ -80,18 +69,6 @@
   to {
     opacity: 1;
     transform: translateY(0);
-  }
-}
-
-@keyframes heroSlideIn {
-  from {
-    opacity: 0;
-    transform: translateX(28px) scale(0.96);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateX(0) scale(1);
   }
 }
 
