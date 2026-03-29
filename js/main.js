@@ -1,13 +1,14 @@
 import "./components/site-header.js";
 import "./components/site-hero.js";
 import "./components/site-products.js";
+import "./components/site-menu.js";
 import "./components/site-about.js";
 import "./components/site-contact.js";
 import "./components/site-footer.js";
 
 function markFadeTargets() {
   const targets = document.querySelectorAll(
-    "site-products section, site-about section, site-contact section, site-footer .site-footer"
+    "site-products > section, site-about > section, site-contact > section, site-footer .site-footer"
   );
 
   targets.forEach((target) => {

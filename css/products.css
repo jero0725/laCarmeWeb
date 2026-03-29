@@ -6,12 +6,23 @@
   color: var(--primary);
   margin-bottom: 1rem;
   text-align: center;
+  padding-top: 30px;
 }
 
 .products-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(220px, 1fr));
   gap: 1rem;
+}
+
+.products-more {
+  margin-top: 1.75rem;
+  display: flex;
+  justify-content: center;
+}
+
+.products-more-btn {
+  cursor: pointer;
 }
 
 .product-card {

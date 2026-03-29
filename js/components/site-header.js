@@ -1,13 +1,25 @@
 const headerContent = {
   brandName: "La Carme",
-  brandLogo: "Recursos/logoSimpleDorado.png",
-  navLinks: [
-    { href: "#", label: "Inicio" },
-    { href: "#productos", label: "Productos" },
-    { href: "#nosotros", label: "Nosotros" },
-    { href: "#contacto", label: "Contacto" }
-  ]
+  brandLogo: "Recursos/logoSimpleDorado.png"
 };
+
+function isMenuPage() {
+  const path = window.location.pathname.toLowerCase();
+  return path.endsWith("/menu.html") || path.endsWith("menu.html");
+}
+
+function getNavLinks() {
+  const inMenuPage = isMenuPage();
+  const homePrefix = inMenuPage ? "index.html" : "";
+
+  return [
+    { href: inMenuPage ? "index.html" : "#", label: "Inicio" },
+    { href: `${homePrefix}#productos`, label: "Productos" },
+    { href: `${homePrefix}#nosotros`, label: "Nosotros" },
+    { href: `${homePrefix}#contacto`, label: "Contacto" },
+    { href: inMenuPage ? "#menu" : "menu.html", label: "Menú" }
+  ];
+}
 
 class SiteHeader extends HTMLElement {
   constructor() {
@@ -15,6 +27,7 @@ class SiteHeader extends HTMLElement {
     this._initialized = false;
     this._handleMenuClick = null;
     this._handleResize = null;
+    this._handleNavLinkClick = null;
   }
 
   connectedCallback() {
@@ -22,15 +35,17 @@ class SiteHeader extends HTMLElement {
       return;
     }
 
+    const navLinks = getNavLinks();
+
     this.innerHTML = `
       <header class="site-header">
         <div class="container header-inner">
-          <a href="#" class="brand" aria-label="La Carme">
+          <a href="${isMenuPage() ? "index.html" : "#"}" class="brand" aria-label="La Carme">
             <img src="${headerContent.brandLogo}" alt="La Carme logo" class="logo" />
             <span>${headerContent.brandName}</span>
           </a>
           <nav class="main-nav" aria-label="Menú principal">
-            ${headerContent.navLinks
+            ${navLinks
               .map((link) => `<a href="${link.href}" class="nav-link">${link.label}</a>`)
               .join("")}
           </nav>
@@ -54,8 +69,15 @@ class SiteHeader extends HTMLElement {
       window.removeEventListener("resize", this._handleResize);
     }
 
+    if (this._handleNavLinkClick) {
+      this.querySelectorAll(".nav-link").forEach((link) => {
+        link.removeEventListener("click", this._handleNavLinkClick);
+      });
+    }
+
     this._handleMenuClick = null;
     this._handleResize = null;
+    this._handleNavLinkClick = null;
     this._initialized = false;
   }
 
@@ -84,8 +106,17 @@ class SiteHeader extends HTMLElement {
       }
     };
 
+    this._handleNavLinkClick = () => {
+      if (window.innerWidth < 680) {
+        setMenuState(false);
+      }
+    };
+
     menuToggle.addEventListener("click", this._handleMenuClick);
     window.addEventListener("resize", this._handleResize);
+    this.querySelectorAll(".nav-link").forEach((link) => {
+      link.addEventListener("click", this._handleNavLinkClick);
+    });
     setMenuState(false);
   }
 }

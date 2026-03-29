@@ -1,17 +1,17 @@
 const productsContent = {
-  title: "Nuestras creaciones",
+  title: "Nuestras creaciones destacadas",
   items: [
     {
-      title: "Torta de Chocolate",
-      description: "Chocolate oscuro, ganache suave y decoraciones con frutos rojos."
+      title: "Alfajores Bariloche",
+      description: "Rellenos la mejor crema de chocolate y dulce de leche y bañados en chocolate."
     },
     {
-      title: "Red Velvet",
-      description: "Clásica con crema de queso y un toque de avellana."
+      title: "Brownie con frutos secos",
+      description: "El brownie más húmedo del país con un top de ganache de chocolate y frutos secos."
     },
     {
-      title: "Cheesecake Caramelizado",
-      description: "Textura cremosa con salsa de caramelo salado."
+      title: "Galletas con chips",
+      description: "Galletas con chips de chocolate, crujientes por fuera y suaves por dentro."
     }
   ]
 };
@@ -34,6 +34,9 @@ class SiteProducts extends HTMLElement {
                 `
               )
               .join("")}
+          </div>
+          <div class="products-more">
+            <a href="menu.html" class="btn-secondary products-more-btn">Ver más productos</a>
           </div>
         </div>
       </section>

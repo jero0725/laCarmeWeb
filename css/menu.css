@@ -1,0 +1,166 @@
+.menu-section {
+  padding: 3.25rem 0;
+  animation: menuSlideUp 1s ease-out forwards;
+}
+
+.menu-header {
+  margin-bottom: 1.75rem;
+  text-align: center;
+}
+
+.menu-header h1 {
+  color: var(--primary);
+  margin-bottom: 0.65rem;
+}
+
+.menu-header p {
+  color: var(--secondary);
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.menu-filter {
+  background: linear-gradient(160deg, rgba(88, 8, 33, 0.08), rgba(234, 173, 98, 0.2));
+  border: 1px solid rgba(88, 8, 33, 0.13);
+  border-radius: 1rem;
+  padding: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.menu-filter__top h2,
+.menu-groups__head h2 {
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.menu-filter__top p,
+.menu-groups__head p,
+.menu-active__head p,
+.menu-group__head p {
+  color: var(--secondary);
+}
+
+.menu-category-tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1rem 0 1.2rem;
+}
+
+.menu-tab {
+  border: 1px solid var(--primary);
+  background: #fff;
+  color: var(--primary);
+  border-radius: 999px;
+  padding: 0.45rem 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+}
+
+.menu-tab:hover,
+.menu-tab:focus-visible {
+  background-color: var(--primary);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.menu-tab.is-active {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.menu-active__head {
+  margin-bottom: 0.85rem;
+}
+
+.menu-active__head h3,
+.menu-group__head h3 {
+  color: var(--primary);
+  margin-bottom: 0.35rem;
+}
+
+.menu-group {
+  margin-top: 1.85rem;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.menu-item {
+  background-color: var(--accent);
+  border-radius: 0.85rem;
+  padding: 1rem;
+  box-shadow: 0 6px 18px rgba(134, 78, 20, 0.2);
+  color: var(--card-text);
+  transition: transform 0.25s ease;
+}
+
+.menu-item:hover {
+  transform: translateY(-4px) scale(1.015);
+}
+
+.menu-item__media {
+  position: relative;
+  margin-bottom: 0.75rem;
+}
+
+.menu-item__image {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 0.65rem;
+  display: block;
+}
+
+.menu-item__image--placeholder {
+  background: linear-gradient(135deg, rgba(88, 8, 33, 0.28), rgba(234, 173, 98, 0.5));
+}
+
+.menu-item__tag {
+  position: absolute;
+  top: 0.55rem;
+  right: 0.55rem;
+  border-radius: 999px;
+  font-size: 0.74rem;
+  font-weight: 700;
+  padding: 0.25rem 0.55rem;
+  background: rgba(88, 8, 33, 0.9);
+  color: #fff;
+}
+
+.menu-item__tag--sin-gluten {
+  background: #1a6f4c;
+}
+
+.menu-item__title {
+  margin-top: 0;
+  margin-bottom: 0.45rem;
+  color: var(--primary);
+}
+
+.menu-item__description {
+  margin: 0;
+  color: var(--card-text);
+}
+
+.menu-empty {
+  margin: 0;
+  color: var(--secondary);
+  font-weight: 600;
+}
+
+@keyframes menuSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
