@@ -66,7 +66,7 @@ class SiteMenu extends HTMLElement {
 
   renderGrid(items) {
     if (!items.length) {
-      return '<p class="menu-empty">No hay productos cargados para esta categoria por ahora.</p>';
+      return '<p class="menu-empty">No hay productos cargados para esta categoría por ahora.</p>';
     }
 
     return `
@@ -89,10 +89,10 @@ class SiteMenu extends HTMLElement {
 
           <section class="menu-filter" aria-labelledby="menu-filter-heading">
             <div class="menu-filter__top">
-              <h2 id="menu-filter-heading">Filtrar por categoria</h2>
-              <p>Selecciona una categoria para ver una grilla enfocada.</p>
+              <h2 id="menu-filter-heading">Filtrar por categoría</h2>
+              <p>Seleccioná una categoría para ver una grilla enfocada.</p>
             </div>
-            <div class="menu-category-tabs" role="group" aria-label="Categorias de menu">
+            <div class="menu-category-tabs" role="group" aria-label="Categorías de menú">
               ${menuContent.categories
                 .map(
                   (category) => `
@@ -119,7 +119,7 @@ class SiteMenu extends HTMLElement {
 
           <section class="menu-groups" aria-labelledby="menu-groups-heading">
             <div class="menu-groups__head">
-              <h2 id="menu-groups-heading">Todo el menu por categorias</h2>
+              <h2 id="menu-groups-heading">Todo el menú por categorías</h2>
               <p>Vista completa para explorar todas las secciones a la vez.</p>
             </div>
             ${menuContent.categories

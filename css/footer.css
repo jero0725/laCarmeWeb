@@ -1,7 +1,7 @@
 .site-footer {
-  background: #f6e7e2;
+  background: var(--bg);
   text-align: center;
   padding: 1.45rem 0;
-  color: #5f2f2d;
-  border-top: 1px solid #edd7ce;
+  color: var(--secondary);
+  border-top: 1px solid var(--accent);
 }

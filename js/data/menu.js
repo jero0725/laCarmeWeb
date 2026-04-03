@@ -1,6 +1,6 @@
 export const menuContent = {
-  title: "Menu de La Carme",
-  subtitle: "Filtra por categoria o recorre todas nuestras opciones por seccion.",
+  title: "Menú de La Carme",
+  subtitle: "Filtrá por categoría o recorré todas nuestras opciones por sección.",
   categories: [
     {
       id: "tortas",
@@ -10,7 +10,7 @@ export const menuContent = {
         {
           id: "tortas-chocolate-fudge",
           title: "Chocolate Fudge",
-          description: "Bizcocho humedo de cacao con ganache intenso y acabado brillante.",
+          description: "Bizcocho húmedo de cacao con ganache intenso y acabado brillante.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "popular"
         },
@@ -24,20 +24,20 @@ export const menuContent = {
         {
           id: "tortas-zanahoria",
           title: "Carrot Cake",
-          description: "Especias calidas, nuez tostada y frosting ligero de queso.",
+          description: "Especias cálidas, nuez tostada y frosting ligero de queso.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "sin gluten"
         },
         {
           id: "tortas-limon",
-          title: "Limon Cremoso",
-          description: "Torta aireada con crema citrica y cobertura de merengue suave.",
+          title: "Limón Cremoso",
+          description: "Torta aireada con crema cítrica y cobertura de merengue suave.",
           image: "Recursos/Portfolio/KeyLimePie.png",
           tag: "nuevo"
         },
         {
           id: "tortas-maracuya",
-          title: "Maracuya",
+          title: "Maracuyá",
           description: "Base de vainilla con curd tropical y mousse sedoso.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "popular"
@@ -58,7 +58,7 @@ export const menuContent = {
       items: [
         {
           id: "alfajores-clasico",
-          title: "Clasico Bano Chocolate",
+          title: "Clásico Baño Chocolate",
           description: "Doble tapa de maicena con dulce de leche y chocolate semiamargo.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "popular"
@@ -73,14 +73,14 @@ export const menuContent = {
         {
           id: "alfajores-pistacho",
           title: "Pistacho",
-          description: "Dulce de leche pastelero y terminacion de pistacho tostado.",
+          description: "Dulce de leche pastelero y terminación de pistacho tostado.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "nuevo"
         },
         {
           id: "alfajores-limon",
-          title: "Limon y Merengue",
-          description: "Relleno citrico equilibrado y glaseado liviano.",
+          title: "Limón y Merengue",
+          description: "Relleno cítrico equilibrado y glaseado liviano.",
           image: "Recursos/Portfolio/KeyLimePie.png",
           tag: "popular"
         },
@@ -93,7 +93,7 @@ export const menuContent = {
         },
         {
           id: "alfajores-cafe",
-          title: "Cafe Intenso",
+          title: "Café Intenso",
           description: "Toque de espresso en masa y relleno, ideal sobremesa.",
           image: "Recursos/Portfolio/KeyLimePie.png",
           tag: "nuevo"
@@ -128,8 +128,8 @@ export const menuContent = {
         },
         {
           id: "galletas-limon",
-          title: "Limon y Semillas",
-          description: "Perfil fresco con semillas crocantes y notas citricas.",
+          title: "Limón y Semillas",
+          description: "Perfil fresco con semillas crocantes y notas cítricas.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "nuevo"
         },
@@ -142,8 +142,8 @@ export const menuContent = {
         },
         {
           id: "galletas-vainilla",
-          title: "Vainilla Clasica",
-          description: "Receta tradicional con terminacion suave y dorada.",
+          title: "Vainilla Clásica",
+          description: "Receta tradicional con terminación suave y dorada.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "popular"
         }
@@ -156,8 +156,8 @@ export const menuContent = {
       items: [
         {
           id: "postres-tiramisu",
-          title: "Tiramisu",
-          description: "Capas de crema y cafe con cacao amargo en polvo.",
+          title: "Tiramisú",
+          description: "Capas de crema y café con cacao amargo en polvo.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "popular"
         },
@@ -178,21 +178,21 @@ export const menuContent = {
         {
           id: "postres-limon-pie",
           title: "Lemon Pie",
-          description: "Curd citrico equilibrado con merengue italiano suave.",
+          description: "Curd cítrico equilibrado con merengue italiano suave.",
           image: "Recursos/Portfolio/KeyLimePie.png",
           tag: "nuevo"
         },
         {
           id: "postres-coco-dulce",
           title: "Coco y Dulce de Leche",
-          description: "Combinacion cremosa con notas tostadas de coco.",
+          description: "Combinación cremosa con notas tostadas de coco.",
           image: "Recursos/Portfolio/Indulgencia.png",
           tag: "popular"
         },
         {
           id: "postres-yogur-granola",
           title: "Yogur y Granola",
-          description: "Alternativa fresca con frutas de estacion.",
+          description: "Alternativa fresca con frutas de estación.",
           image: "Recursos/Portfolio/KeyLimePie.png",
           tag: "sin gluten"
         }

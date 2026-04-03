@@ -3,7 +3,7 @@ const productsContent = {
   items: [
     {
       title: "Alfajores Bariloche",
-      description: "Rellenos la mejor crema de chocolate y dulce de leche y bañados en chocolate."
+      description: "Rellenos con la mejor crema de chocolate y dulce de leche y bañados en chocolate."
     },
     {
       title: "Brownie con frutos secos",

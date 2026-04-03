@@ -56,13 +56,3 @@
   color: #fdf5f2;
   margin-bottom: 1.5rem;
 }
-
-@media (prefers-reduced-motion: reduce) {
-  .hero,
-  .hero-left,
-  .hero-right {
-    animation: none;
-    opacity: 1;
-    transform: none;
-  }
-}

@@ -14,8 +14,8 @@ class SiteContact extends HTMLElement {
         <div class="container">
           <h2>${contactContent.title}</h2>
           <p>${contactContent.intro}</p>
-          <p><strong>${contactContent.emailLabel}:</strong> ${contactContent.email}</p>
-          <p><strong>${contactContent.phoneLabel}:</strong> ${contactContent.phone}</p>
+          <p><strong>${contactContent.emailLabel}:</strong> <a href="mailto:${contactContent.email}">${contactContent.email}</a></p>
+          <p><strong>${contactContent.phoneLabel}:</strong> <a href="tel:${contactContent.phone.replace(/\s+/g, "")}">${contactContent.phone}</a></p>
         </div>
       </section>
     `;
