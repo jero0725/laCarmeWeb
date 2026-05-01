@@ -1,0 +1,131 @@
+@media (max-width: 860px) {
+  .header-inner {
+    flex-wrap: wrap;
+  }
+
+  .main-nav {
+    gap: 0.75rem;
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+
+  .menu-grid {
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+  }
+
+  .hero h1 {
+    font-size: clamp(1.75rem, 5vw, 2.75rem);
+  }
+}
+
+@media (max-width: 680px) {
+  .main-nav {
+    position: absolute;
+    right: 1rem;
+    top: 5rem;
+    z-index: 25;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    background: rgba(88, 8, 33, 0.95);
+    padding: 0.8rem 0.8rem;
+    border-radius: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: translateY(-0.65rem) scale(0.98);
+    transform-origin: top right;
+    transition: opacity 220ms ease, transform 220ms ease, visibility 0s linear 220ms;
+  }
+
+  .main-nav.open {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translateY(0) scale(1);
+    transition-delay: 0s;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .hero {
+    min-height: auto;
+    padding: 2rem 0;
+  }
+
+  .hero h1 {
+        margin: 0.5rem 0;
+  }
+
+  .hero-content {
+    display: block;
+    text-align: center;
+    max-width: 90vw;
+  }
+
+  .hero-right {
+    padding: 0;
+    margin-top: 1.25rem;
+  }
+
+  .logo-hero {
+    height: 35vh;
+    width: auto;
+    margin: 1rem auto;
+  }
+
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .menu-category-tabs {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: 0.35rem;
+  }
+
+  .menu-tab {
+    white-space: nowrap;
+  }
+
+  .brand {
+    margin-bottom: 0.45rem;
+  }
+
+  .hero p {
+    margin: 0.5rem 0;
+
+  }
+
+}
+
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+
+  .logo-hero {
+    height: 40vh;
+    width: auto;
+    /*width: min(80vw, 300px);*/
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+}
